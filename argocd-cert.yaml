@@ -1,0 +1,8 @@
+apiVersion: networking.gke.io/v1
+kind: ManagedCertificate
+metadata:
+  name: argocd-google-cert
+  namespace: argocd
+spec:
+  domains:
+    - argocd.visionary.work.gd
