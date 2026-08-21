@@ -1,0 +1,28 @@
+replicaCount: 2
+
+image:
+  repository: asia-south1-docker.pkg.dev/project-903506bd-f865-4325-92d/visionary/devops-cloud-hub
+  tag: "latest"
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+
+ingress:
+  enabled: true
+  className: "gce"
+  host: visionary.work.gd
+  annotations:
+    networking.gke.io/managed-certificates: "visionary-google-cert"
+    kubernetes.io/ingress.class: "gce"
+    ingress.kubernetes.io/ssl-redirect: "true"
+
+resources:
+  requests:
+    cpu: 100m
+    memory: 128Mi
+  limits:
+    cpu: 300m
+    memory: 256Mi
