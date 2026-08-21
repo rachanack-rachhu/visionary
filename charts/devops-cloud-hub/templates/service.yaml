@@ -13,6 +13,3 @@ spec:
       name: http
   selector:
     app: {{ .Release.Name }}
-
-    
-    
