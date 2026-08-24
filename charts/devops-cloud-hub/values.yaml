@@ -1,4 +1,4 @@
-replicaCount: 2
+replicaCount: 1
 
 image:
   repository: asia-south1-docker.pkg.dev/project-903506bd-f865-4325-92d/visionary/devops-cloud-hub
