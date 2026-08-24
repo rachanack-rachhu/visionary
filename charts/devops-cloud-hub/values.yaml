@@ -2,7 +2,7 @@ replicaCount: 2
 
 image:
   repository: asia-south1-docker.pkg.dev/project-903506bd-f865-4325-92d/visionary/devops-cloud-hub
-  tag: "latest"
+  tag: "4"
   pullPolicy: IfNotPresent
 
 service:
