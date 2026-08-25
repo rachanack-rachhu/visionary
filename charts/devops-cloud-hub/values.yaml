@@ -12,12 +12,11 @@ service:
 
 ingress:
   enabled: true
-  className: "gce"
+  className: gce
   host: visionary.work.gd
   annotations:
-    networking.gke.io/managed-certificates: "visionary-google-cert"
-    kubernetes.io/ingress.class: "gce"
-    #ingress.kubernetes.io/ssl-redirect: "true"
+    kubernetes.io/ingress.class: gce
+    cert-manager.io/cluster-issuer: letsencrypt-prod
 
 resources:
   requests:
