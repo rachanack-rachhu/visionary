@@ -17,7 +17,7 @@ ingress:
   annotations:
     networking.gke.io/managed-certificates: "visionary-google-cert"
     kubernetes.io/ingress.class: "gce"
-    ingress.kubernetes.io/ssl-redirect: "true"
+    #ingress.kubernetes.io/ssl-redirect: "true"
 
 resources:
   requests:
