@@ -12,12 +12,10 @@ service:
 
 ingress:
   enabled: true
-  className: gce
+  className: nginx
   host: visionary.work.gd
   annotations:
-    kubernetes.io/ingress.class: gce
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    acme.cert-manager.io/http01-edit-in-place: "true"
 
 resources:
   requests:
